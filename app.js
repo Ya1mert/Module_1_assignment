@@ -13,9 +13,8 @@
     $scope.checkEverything = function(){
       if ( $scope.inputs === undefined ) { return $scope.answer = "Please enter data first"}; //Checking for empty inputs
       var inputArray = $scope.inputs.split(',');
-      var a = inputArray.length;
       var resultArray = [];
-      for (var i=0; i < a ; i++){
+      for (var i=0; i < inputArray.length ; i++){
         if (inputArray[i] != '') { resultArray.push(inputArray[i])}   // Filter mechanism for checking for an 'empty' item as a bonus feature
       };
       ( resultArray.length < 4) ? $scope.answer = "Enjoy!" : $scope.answer = "Too much!";
